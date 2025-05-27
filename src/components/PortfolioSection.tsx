@@ -10,42 +10,48 @@ const PortfolioSection = () => {
       title: "Modern Kitchen Transformation",
       category: "kitchen",
       description: "Complete kitchen makeover with modular cabinets and premium finishes",
-      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04"
+      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
+      details: "This modern kitchen features sleek modular cabinets with soft-close mechanisms, granite countertops, and premium hardware. Complete transformation took 2 weeks with minimal disruption to daily life."
     },
     {
       id: 2,
       title: "Luxury Wardrobe Design",
       category: "bedroom",
       description: "Custom wardrobe with sliding doors and smart storage solutions",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+      details: "Floor-to-ceiling wardrobe with mirror sliding doors, LED lighting, and customized compartments for optimal storage organization."
     },
     {
       id: 3,
       title: "Bathroom Door Installation",
       category: "bathroom",
       description: "PVC doors perfect for moisture-resistant bathroom applications",
-      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a"
+      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a",
+      details: "High-quality PVC doors designed specifically for bathroom environments with superior moisture resistance and durability."
     },
     {
       id: 4,
       title: "Living Room False Ceiling",
       category: "living",
       description: "Elegant false ceiling design with integrated lighting",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+      details: "Contemporary false ceiling with recessed LED lighting, creating ambient atmosphere and hiding electrical wiring aesthetically."
     },
     {
       id: 5,
       title: "Office Interior Design",
       category: "office",
       description: "Complete office interior with modern paneling and furniture",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c"
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c",
+      details: "Professional office space with ergonomic furniture, acoustic wall panels, and efficient lighting for productive work environment."
     },
     {
       id: 6,
       title: "Bedroom Loft Storage",
       category: "bedroom",
       description: "Space-saving loft covers for maximum storage utility",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+      details: "Innovative loft storage solution maximizing vertical space while maintaining easy access and aesthetic appeal."
     }
   ];
 
@@ -61,6 +67,12 @@ const PortfolioSection = () => {
   const filteredItems = activeCategory === 'all' 
     ? portfolioItems 
     : portfolioItems.filter(item => item.category === activeCategory);
+
+  const handleViewDetails = (item: typeof portfolioItems[0]) => {
+    const message = `Hello! I'm interested in learning more about the "${item.title}" project. ${item.details}`;
+    const whatsappMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/919843155325?text=${whatsappMessage}`, '_blank');
+  };
 
   return (
     <section id="portfolio" className="py-20 bg-gray-50">
@@ -119,7 +131,10 @@ const PortfolioSection = () => {
                   <span className="text-luxury-gold text-sm font-medium uppercase tracking-wide">
                     {categories.find(cat => cat.id === item.category)?.label}
                   </span>
-                  <button className="text-luxury-brown hover:text-luxury-gold transition-colors duration-300 font-medium">
+                  <button 
+                    onClick={() => handleViewDetails(item)}
+                    className="text-luxury-brown hover:text-luxury-gold transition-colors duration-300 font-medium"
+                  >
                     View Details →
                   </button>
                 </div>

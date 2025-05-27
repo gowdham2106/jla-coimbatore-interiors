@@ -67,19 +67,19 @@ const ContactSection = () => {
                           href="tel:9843155325" 
                           className="block text-gray-700 hover:text-luxury-gold transition-colors"
                         >
-                          📱 9843155325 (Primary)
+                          9843155325 (Primary)
                         </a>
                         <a 
                           href="tel:9843255326" 
                           className="block text-gray-700 hover:text-luxury-gold transition-colors"
                         >
-                          🏪 9843255326 (Shop)
+                          9843255326 (Shop)
                         </a>
                         <a 
                           href="tel:9789455325" 
                           className="block text-gray-700 hover:text-luxury-gold transition-colors"
                         >
-                          🏪 9789455325 (Shop)
+                          9789455325 (Shop)
                         </a>
                       </div>
                     </div>

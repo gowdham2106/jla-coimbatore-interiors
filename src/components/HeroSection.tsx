@@ -11,17 +11,17 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="hero-gradient min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+    <section id="home" className="hero-gradient min-h-[70vh] md:min-h-screen flex items-center justify-center text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-black/20"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
             Transform Your Space with
             <span className="block text-luxury-gold">Premium Interiors</span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-luxury-cream max-w-3xl mx-auto">
+          <p className="text-lg md:text-2xl mb-6 md:mb-8 text-luxury-cream max-w-3xl mx-auto">
             Expert interior solutions for doors, kitchens, wardrobes & complete home transformations in Coimbatore
           </p>
           
@@ -45,22 +45,22 @@ const HeroSection = () => {
             </Button>
           </div>
           
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-luxury-gold">15+</div>
-              <div className="text-luxury-cream">Years Experience</div>
+              <div className="text-2xl md:text-3xl font-bold text-luxury-gold">25+</div>
+              <div className="text-sm md:text-base text-luxury-cream">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-luxury-gold">500+</div>
-              <div className="text-luxury-cream">Projects Completed</div>
+              <div className="text-2xl md:text-3xl font-bold text-luxury-gold">500+</div>
+              <div className="text-sm md:text-base text-luxury-cream">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-luxury-gold">100%</div>
-              <div className="text-luxury-cream">Customer Satisfaction</div>
+              <div className="text-2xl md:text-3xl font-bold text-luxury-gold">100%</div>
+              <div className="text-sm md:text-base text-luxury-cream">Customer Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-luxury-gold">24/7</div>
-              <div className="text-luxury-cream">Support</div>
+              <div className="text-2xl md:text-3xl font-bold text-luxury-gold">24/7</div>
+              <div className="text-sm md:text-base text-luxury-cream">Support</div>
             </div>
           </div>
         </div>
