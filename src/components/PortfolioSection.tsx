@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 const PortfolioSection = () => {
@@ -75,23 +74,23 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-50">
+    <section id="portfolio" className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-luxury-brown mb-6">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-luxury-brown mb-4 md:mb-6">
             Our Portfolio
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6 md:mb-8">
             Explore our completed projects showcasing quality craftsmanship and innovative design
           </p>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                className={`px-4 md:px-6 py-2 md:py-3 rounded-lg font-medium transition-all duration-300 text-sm md:text-base ${
                   activeCategory === category.id
                     ? 'bg-luxury-gold text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-luxury-gold hover:text-white'
@@ -104,7 +103,7 @@ const PortfolioSection = () => {
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {filteredItems.map((item, index) => (
             <div 
               key={item.id}
@@ -115,25 +114,25 @@ const PortfolioSection = () => {
                 <img 
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-luxury-brown/20 group-hover:bg-luxury-brown/40 transition-colors duration-300"></div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-luxury-brown mb-2">
+              <div className="p-4 md:p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-luxury-brown mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="text-gray-600 text-xs md:text-sm mb-3 md:mb-4">
                   {item.description}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-luxury-gold text-sm font-medium uppercase tracking-wide">
+                  <span className="text-luxury-gold text-xs md:text-sm font-medium uppercase tracking-wide">
                     {categories.find(cat => cat.id === item.category)?.label}
                   </span>
                   <button 
                     onClick={() => handleViewDetails(item)}
-                    className="text-luxury-brown hover:text-luxury-gold transition-colors duration-300 font-medium"
+                    className="text-luxury-brown hover:text-luxury-gold transition-colors duration-300 font-medium text-xs md:text-sm"
                   >
                     View Details →
                   </button>
@@ -144,20 +143,20 @@ const PortfolioSection = () => {
         </div>
 
         {/* Testimonial */}
-        <div className="mt-20 bg-white rounded-lg shadow-lg p-8 md:p-12">
+        <div className="mt-12 md:mt-20 bg-white rounded-lg shadow-lg p-6 md:p-12">
           <div className="text-center">
-            <div className="text-luxury-gold text-5xl mb-4">"</div>
-            <blockquote className="text-xl md:text-2xl text-gray-700 italic mb-6 max-w-4xl mx-auto">
+            <div className="text-luxury-gold text-4xl md:text-5xl mb-4">"</div>
+            <blockquote className="text-lg md:text-2xl text-gray-700 italic mb-4 md:mb-6 max-w-4xl mx-auto">
               Jayalakshmi Agency transformed our entire home beautifully. The quality of work and attention 
               to detail is exceptional. Mr. Parthiban and his team are truly professional and reliable.
             </blockquote>
             <div className="flex items-center justify-center space-x-4">
-              <div className="w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center">
-                <span className="text-white font-semibold">RS</span>
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-luxury-gold rounded-full flex items-center justify-center">
+                <span className="text-white font-semibold text-sm md:text-base">RS</span>
               </div>
               <div className="text-left">
-                <div className="font-semibold text-luxury-brown">Rajesh Sharma</div>
-                <div className="text-gray-600 text-sm">Homeowner, Ganapathy</div>
+                <div className="font-semibold text-luxury-brown text-sm md:text-base">Rajesh Sharma</div>
+                <div className="text-gray-600 text-xs md:text-sm">Homeowner, Ganapathy</div>
               </div>
             </div>
           </div>

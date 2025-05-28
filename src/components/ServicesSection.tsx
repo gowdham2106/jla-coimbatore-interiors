@@ -44,41 +44,41 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-luxury-brown mb-6">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-luxury-brown mb-4 md:mb-6">
             Our Premium Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive interior solutions tailored to transform your space with quality and style
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="service-card p-6 group"
+              className="service-card p-4 md:p-6 group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="h-full flex flex-col">
-                <div className="mb-4">
-                  <div className="w-12 h-12 bg-luxury-gold rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white text-xl">🏠</span>
+                <div className="mb-3 md:mb-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-luxury-gold rounded-lg flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-white text-lg md:text-xl">🏠</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-luxury-brown mb-2">
+                  <h3 className="text-lg md:text-xl font-semibold text-luxury-brown mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">
                     {service.description}
                   </p>
                 </div>
                 
                 <div className="mt-auto">
-                  <ul className="space-y-2">
+                  <ul className="space-y-1 md:space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                      <li key={featureIndex} className="flex items-center text-xs md:text-sm text-gray-700">
                         <span className="text-luxury-gold mr-2 text-xs">●</span>
                         {feature}
                       </li>
@@ -90,12 +90,12 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-lg text-gray-600 mb-6">
+        <div className="text-center mt-8 md:mt-12">
+          <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6">
             Serving Coimbatore and surrounding areas with premium interior solutions
           </p>
           <button 
-            className="bg-luxury-gold hover:bg-luxury-brown text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+            className="bg-luxury-gold hover:bg-luxury-brown text-white px-6 md:px-8 py-2 md:py-3 rounded-lg font-semibold transition-colors duration-300 text-sm md:text-base"
             onClick={() => window.open('tel:9843155325')}
           >
             Get Free Consultation
