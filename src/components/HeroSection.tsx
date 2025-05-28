@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
 
@@ -37,7 +38,7 @@ const HeroSection = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-luxury-brown font-semibold px-8 py-4 text-lg min-w-[200px]"
+              className="border-white bg-white text-luxury-brown hover:bg-luxury-brown hover:text-white font-semibold px-8 py-4 text-lg min-w-[200px]"
               onClick={scrollToContact}
             >
               Get Free Quote
