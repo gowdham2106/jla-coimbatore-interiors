@@ -29,7 +29,7 @@ const HeroSection = () => {
             <Button 
               size="lg"
               className="bg-luxury-gold hover:bg-white hover:text-luxury-brown text-white font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg transition-all duration-300 min-w-[180px] md:min-w-[200px]"
-              onClick={() => window.open('tel:984315532*')}
+              onClick={() => window.open('tel:9843155325')}
             >
               <Phone className="w-4 h-4 mr-2" />
               Call Now
@@ -44,7 +44,7 @@ const HeroSection = () => {
               Get Free Quote
             </Button>
           </div>
-          
+        
           <div className="mt-6 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-xl md:text-3xl font-bold text-luxury-gold">25+</div>
