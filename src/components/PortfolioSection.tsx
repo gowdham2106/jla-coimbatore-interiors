@@ -117,13 +117,13 @@ const PortfolioSection = () => {
 
           {/* Project Card */}
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-white/10">
-            <div className="grid md:grid-cols-2">
-              {/* Image Section - Smaller Fixed Height */}
-              <div className="relative overflow-hidden group h-[300px] md:h-[400px]">
+            <div className="grid md:grid-cols-2 h-[500px] md:h-[600px]">
+              {/* Image Section */}
+              <div className="relative overflow-hidden group">
                 <img 
                   src={currentProject.image}
                   alt={currentProject.title}
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 
@@ -138,8 +138,8 @@ const PortfolioSection = () => {
                 </div>
               </div>
 
-              {/* Content Section - Matching Smaller Height */}
-              <div className="p-6 md:p-8 lg:p-12 flex flex-col justify-center h-[300px] md:h-[400px]">
+              {/* Content Section */}
+              <div className="p-6 md:p-8 lg:p-12 flex flex-col justify-center">
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
