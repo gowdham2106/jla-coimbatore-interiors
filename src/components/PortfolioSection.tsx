@@ -116,9 +116,9 @@ const PortfolioSection = () => {
 
           {/* Project Card */}
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-white/10">
-            <div className="grid md:grid-cols-2 h-[500px] md:h-[600px]">
-              {/* Image Section */}
-              <div className="relative overflow-hidden group">
+            <div className="grid md:grid-cols-2">
+              {/* Image Section - Fixed Height */}
+              <div className="relative overflow-hidden group h-[400px] md:h-[600px]">
                 <img 
                   src={currentProject.image}
                   alt={currentProject.title}
@@ -137,8 +137,8 @@ const PortfolioSection = () => {
                 </div>
               </div>
 
-              {/* Content Section */}
-              <div className="p-6 md:p-8 lg:p-12 flex flex-col justify-center">
+              {/* Content Section - Matching Height */}
+              <div className="p-6 md:p-8 lg:p-12 flex flex-col justify-center h-[400px] md:h-[600px]">
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
