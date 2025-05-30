@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('all');
+  const navigate = useNavigate();
 
   const portfolioItems = [
     {
@@ -68,9 +70,7 @@ const PortfolioSection = () => {
     : portfolioItems.filter(item => item.category === activeCategory);
 
   const handleViewDetails = (item: typeof portfolioItems[0]) => {
-    const message = `Hello! I'm interested in learning more about the "${item.title}" project. ${item.details}`;
-    const whatsappMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/919843155325?text=${whatsappMessage}`, '_blank');
+    navigate(`/project/${item.id}`);
   };
 
   return (
